@@ -267,7 +267,7 @@ void pipe()
 		NULL);
 	if (hFind != INVALID_HANDLE_VALUE){
 		CloseHandle(hFind);
-		printf("/!\\ Pipe \\\\.\\ pipe \\ cuckoo found !\ n");
+		printf("Pipe cuckoo found !\ n");
 	}
 }
 
@@ -312,23 +312,6 @@ bool command()
 	return result_flag;
 }
 
-void getFiles(char *filename)
-{
-	bool flag = false;
-	try
-	{
-		DWORD dwattrib;
-		dwattrib = GetFileAttributesA(filename);
-		if ((dwattrib != INVALID_FILE_ATTRIBUTES) && (dwattrib &
-			FILE_ATTRIBUTE_DIRECTORY)){
-			printf("%s\n", filename);
-		}
-	}
-	catch (int e)
-	{
-		perror("");
-	}
-}
 
 void cuckoo()
 {
