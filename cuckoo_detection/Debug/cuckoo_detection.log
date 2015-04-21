@@ -1,0 +1,29 @@
+﻿Build started 21.4.2015 14:23:04.
+     1>Project "C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt header1.h Source.cpp Thread.cpp
+         Thread.cpp
+         Source.cpp
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(101): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(129): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(125): warning C4101: 'result' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(197): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(191): warning C4101: 'result' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(247): warning C4244: 'argument' : conversion from 'WCHAR' to 'char', possible loss of data
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(270): warning C4129: ' ' : unrecognized character escape sequence
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(308): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(327): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\source.cpp(411): warning C4101: 'e' : unreferenced local variable
+         header1.h
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.lib" /MACHINE:X86 Debug\header1.obj
+         Debug\Source.obj
+         Debug\Thread.obj
+     1>LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+         cuckoo_detection.vcxproj -> C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe
+     1>Done Building Project "C:\Users\akyol\documents\visual studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.57
