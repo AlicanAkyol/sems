@@ -79,12 +79,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="header1.h" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="AntiVirtualMachineDetect.cpp" />
+    <ClCompile Include="CuckooDetect.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="VirtualBoxDetect.cpp" />
+    <ClCompile Include="VirtualMachineDetect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dllandFunctions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Func.h" />
+    <ClInclude Include="headers.h" />
+    <ClInclude Include="VirtualandCuckooDetect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
