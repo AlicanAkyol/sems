@@ -80,9 +80,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntiVirtualMachineDetect.cpp" />
+    <ClCompile Include="AnubisDetect.cpp" />
     <ClCompile Include="CuckooDetect.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ThreatExpert.cpp" />
     <ClCompile Include="VirtualBoxDetect.cpp" />
     <ClCompile Include="VirtualMachineDetect.cpp" />
   </ItemGroup>

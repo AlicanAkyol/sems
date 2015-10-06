@@ -33,6 +33,12 @@
     <ClCompile Include="AntiVirtualMachineDetect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AnubisDetect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreatExpert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="dllandFunctions.txt">

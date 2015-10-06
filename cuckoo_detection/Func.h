@@ -16,4 +16,6 @@ bool CheckEnum(char * subkey, int choice);
 bool processTools(string process, int size);
 bool servicesTools(wchar_t * value);
 void checkCoreNumber();
+void createAndWriteFile(char *fileName);
+TCHAR * getComputerName();
 #endif

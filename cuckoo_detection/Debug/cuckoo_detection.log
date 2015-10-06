@@ -1,11 +1,54 @@
-﻿Build started 25.6.2015 14:38:29.
-     1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Build target(s)).
+﻿Build started 6.10.2015 14:34:07.
+     1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AntiVirtualMachineDetect.cpp AnubisDetect.cpp CuckooDetect.cpp Functions.cpp main.cpp ThreatExpert.cpp VirtualBoxDetect.cpp VirtualMachineDetect.cpp
+         VirtualMachineDetect.cpp
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(58): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(86): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(94): warning C4129: 'W' : unrecognized character escape sequence
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(94): warning C4129: 's' : unrecognized character escape sequence
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(94): warning C4129: 'V' : unrecognized character escape sequence
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(127): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(142): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(169): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(199): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(221): warning C4101: 'e' : unreferenced local variable
+         VirtualBoxDetect.cpp
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(35): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(63): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(158): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(179): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(204): warning C4101: 'e' : unreferenced local variable
+         ThreatExpert.cpp
          main.cpp
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\main.cpp(10): error C4700: uninitialized local variable 'a' used
-     1>Done Building Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" (Build target(s)) -- FAILED.
+         Functions.cpp
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(62): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(162): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(156): warning C4101: 'result' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(206): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(208): warning C4244: 'argument' : conversion from 'WCHAR' to 'char', possible loss of data
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(226): warning C4305: 'return' : truncation from 'int' to 'bool'
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(288): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(310): warning C4172: returning address of local variable or temporary
+         CuckooDetect.cpp
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(66): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(158): warning C4101: 'e' : unreferenced local variable
+         AnubisDetect.cpp
+         AntiVirtualMachineDetect.cpp
+         Generating Code...
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(62): warning C4715: 'vmware' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.lib" /MACHINE:X86 Debug\AntiVirtualMachineDetect.obj
+         Debug\AnubisDetect.obj
+         Debug\CuckooDetect.obj
+         Debug\Functions.obj
+         Debug\main.obj
+         Debug\ThreatExpert.obj
+         Debug\VirtualBoxDetect.obj
+         Debug\VirtualMachineDetect.obj
+         cuckoo_detection.vcxproj -> C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe
+     1>Done Building Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" (Rebuild target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:04.15

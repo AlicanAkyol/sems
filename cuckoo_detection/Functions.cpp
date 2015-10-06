@@ -290,3 +290,23 @@ void checkCoreNumber()
 		perror("");
 	}
 }
+
+void createAndWriteFile(char * fileName)
+{
+	ofstream myfile;
+	myfile.open(fileName);
+	myfile << "Hello World.\n";
+	myfile.close();
+}
+
+TCHAR * getComputerName()
+{
+	TCHAR nameBuf[MAX_COMPUTERNAME_LENGTH + 2];
+	DWORD nameBufSize;
+
+	nameBufSize = sizeof nameBuf - 1;
+	GetComputerName(nameBuf, &nameBufSize);
+
+	return nameBuf;
+		
+}

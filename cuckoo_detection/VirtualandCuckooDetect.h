@@ -7,5 +7,7 @@ void virtualMachineDetect();
 void virtualBoxDetect();
 void cuckooDetect();
 void antiVirtualMachineDetect();
+void anubisDetect();
+void threatExpertDetect();
 
 #endif

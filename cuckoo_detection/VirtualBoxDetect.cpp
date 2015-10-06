@@ -11,6 +11,7 @@ void vboxguest()
 {
 	if (registerOpenKey("SOFTWARE\\Oracle\\VirtualBox Guest Additions") == ERROR_SUCCESS)
 	{
+		createAndWriteFile("vboxguest.txt");
 		printf("VirtualBox Detected (SOFTWARE\\Oracle\\VirtualBox Guest Additions)\n");
 	}	
 }
@@ -26,6 +27,7 @@ void vboxServices()
 		{
 			if (registerOpenKey((char*)(services[i].c_str())) == ERROR_SUCCESS)
 			{
+				createAndWriteFile("vboxservices.txt");
 				printf("VirtualBox Detected (%s)\n", services[i].c_str());
 			}
 		}
@@ -51,7 +53,11 @@ void vboxFile()
 		for (size_t i = 0; i < sizeof(files) / sizeof(files[0]); i++)
 		{
 			if (fileExist((char*)files[i].c_str()) != INVALID_FILE_ATTRIBUTES)
+			{
+				createAndWriteFile("vboxfiles.txt");
 				printf("VirtualBox Detected (%s)\n", files[i].c_str());
+			}
+				
 		}
 	}
 	catch (int e){
@@ -63,6 +69,7 @@ void vboxTrayIPC()
 {
 	if (createFile("\\\\.\\pipe\\VBoxTrayIPC") != INVALID_HANDLE_VALUE)
 	{
+		createAndWriteFile("vboxtrayIpc.txt");
 		printf("VirtualBox Detected (\\\\.\\pipe\\VBoxTrayIPC)\n");
 	}
 }
@@ -72,7 +79,11 @@ void vboxTrayTool()
 	HWND hClass = findWindowforClass("VBoxTrayToolWndClass");
 	HWND hWindow = findWindowforWindow("VBoxTrayToolWnd");
 	if (hClass || hWindow)
+	{
+		createAndWriteFile("vboxtraytool.txt");
 		printf("VirtualBox Detected (TrayTool)\n");
+	}
+		
 }
 
 void vboxShared()
@@ -84,6 +95,7 @@ void vboxShared()
 	{
 		if (lstrcmpiA(provider, "VirtualBox Shared Folders") == 0)
 		{
+			createAndWriteFile("vboxshare.txt");
 			printf("VirtualBox detected (Shared)\n");
 		}
 	}
@@ -92,20 +104,40 @@ void vboxShared()
 void vboxBios()
 {
 	if (CheckReg("HARDWARE\\DESCRIPTION\\System", "SystemBiosVersion", "vbox", ""))
+	{
+		createAndWriteFile("vboxBios1.txt");
 		printf("VirtualBox Detected");
+	}
+		
 	if (CheckReg("HARDWARE\\DESCRIPTION\\System", "VideoBiosVersion", "oracle", "virtualbox"))
+	{
+		createAndWriteFile("vboxBios2.txt");
 		printf("VirtualBox Detected");
+	}
+		
 	if (CheckReg("HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0",
 		"Identifier", "vbox", ""))
+	{
+		createAndWriteFile("vboxBios3.txt");
 		printf("VirtualBox Detected");
+	}
+		
 	if (CheckReg("SYSTEM\\CurrentControlSet\\Control\\SystemInformation", "SystemProductName", "virtualbox", ""))
+	{
+		createAndWriteFile("vboxBios4.txt");
 		printf("VirtualBox Detected");
+	}
+		
 }
 
 void vobxEnum()
 {
 	if (CheckEnum("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1))
+	{
+		createAndWriteFile("vboxenum.txt");
 		printf("VirtualBox Detected");
+	}
+		
 }
 
 void vobxAcpi()
@@ -118,6 +150,7 @@ void vobxAcpi()
 		{
 			if (registerOpenKey((char*)reg[i].c_str()) == ERROR_SUCCESS)
 			{
+				createAndWriteFile("vboxAcpi.txt");
 				printf("VirtualBox Detected (%s)\n",reg[i].c_str());
 			}
 		}
@@ -137,6 +170,8 @@ void vboxDevices()
 		{
 			if (createFile((char*)devices[i].c_str()) != INVALID_HANDLE_VALUE)
 			{
+				createAndWriteFile("vboxdevice.txt");
+
 				printf("VirtualBox Detected (%s)\n", devices[i].c_str());
 			}
 		}
@@ -159,6 +194,8 @@ void vboxMac()
 				mac = strtok(NULL, ":");
 				if (strcmp(mac, "27") == 0)
 				{
+					createAndWriteFile("vboxmac.txt");
+
 					printf("VirtualBox Detected (MAC)\n");
 				}
 			}

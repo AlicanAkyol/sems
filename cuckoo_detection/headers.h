@@ -14,6 +14,7 @@
 #include <windows.h>
 #include <cstring>
 #include <cstdlib>
+#include <tchar.h>
 #pragma comment(lib, "iphlpapi.lib")
 using namespace std;
 #pragma comment(lib, "Mpr")

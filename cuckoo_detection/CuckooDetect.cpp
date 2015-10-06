@@ -7,15 +7,24 @@
 void agent()
 {
 	if (processTools("python.", 7))
+	{
+		createAndWriteFile("agent.txt");
 		printf("VirtualBox Detected (agent.py)\n");
+	}
+		
 	if (processTools("pythonw", 7))
+	{
+		createAndWriteFile("agent.txt");
 		printf("VirtualBox Detected (agent.py)\n");
+	}
+		
 }
 
 void pipe()
 {
 	if (createFile("\\\\.\\pipe\\cuckoo") != INVALID_HANDLE_VALUE)
 	{
+		createAndWriteFile("pipe.txt");
 		printf("VirtualBox Detected (\\\\.\\pipe\\cuckoo)\n");
 	}
 }
@@ -64,7 +73,11 @@ bool command()
 void cuckoo()
 {
 	if (command())
+	{
+		createAndWriteFile("cuckoo.txt");
 		printf("Cuckoo detected (Files)\n");
+	}
+		
 }
 
 void functionHookedByCuckoo()
@@ -135,6 +148,7 @@ void functionHookedByCuckoo()
 					addr = GetProcAddress(LoadLibraryA(functions[i][0].c_str()), functions[i][j].c_str());
 					if (addr == 0x00000000) continue;
 					else if (*(BYTE *)addr == 0xE9) {
+						createAndWriteFile("hook.txt");
 						printf("Cuckoo detected (Function hook)!!\n"); break;
 					}
 				}
@@ -158,6 +172,7 @@ void portScanner()
 	}
 	if (s.find(":2042") != std::string::npos)
 	{
+		createAndWriteFile("portnumber.txt");
 		printf("Cuckoo detection(Port number 2042)");
 	}
 	_pclose(p);
@@ -166,10 +181,10 @@ void portScanner()
 void cuckooDetect()
 {
 	checkCoreNumber();
-	//portScanner();
-	//agent();
-	//pipe();
-	//cuckoo();
+	portScanner();
+	agent();
+	pipe();
+	cuckoo();
 	functionHookedByCuckoo();
 }
 

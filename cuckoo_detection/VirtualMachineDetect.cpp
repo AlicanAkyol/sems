@@ -32,7 +32,11 @@ void IsInsideVMWare()
 	}
 
 	if (rc)
+	{
+		createAndWriteFile("vmware.txt");
 		printf("VM Detected- VMX -\n");
+	}
+		
 }
 
 unsigned vmware(void)
@@ -72,7 +76,11 @@ void vmFile()
 		for (size_t i = 0; i < sizeof(files) / sizeof(files[0]); i++)
 		{
 			if (fileExist((char*)files[i].c_str()) != INVALID_FILE_ATTRIBUTES)
+			{
+				createAndWriteFile("vmfile.txt");
 				printf("VM Detected (%s)\n", files[i].c_str());
+			}
+				
 		}
 	}
 	catch (int e){
@@ -108,7 +116,11 @@ void vmRegVal()
 				string str;
 				str = "HARDWARE\\DEVICEMAP\\Scsi\\" + val1[i] + "\\" + val2[j] + "\\Target Id 0\\Logical Unit Id 0";
 				if (CheckReg(str, "Identifier", "vmware", ""))
+				{
+					createAndWriteFile("vmdetectedIdentifier.txt");
 					printf("VM Detected (%s)\n", "Identifier");
+				}
+					
 			}
 		}
 	}
@@ -120,7 +132,11 @@ void vmRegVal()
 		for (size_t i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
 		{
 			if (CheckReg(arr[i][0], arr[i][1], arr[i][2], arr[i][3]))
+			{
+				createAndWriteFile("vmdetected.txt");
 				printf("VM Detected (%s)\n", arr[i][1].c_str());
+			}
+				
 		}
 	}
 	catch (int e){
@@ -143,7 +159,11 @@ void vmRegKey()
 		for (size_t i = 0; i < sizeof(keys) / sizeof(keys[0]); i++)
 		{
 			if (registerOpenKey((char *)keys[i].c_str()) == ERROR_SUCCESS)
+			{
+				createAndWriteFile("vmregKey.txt");
 				printf("VM Detected (%s)\n", keys[i].c_str());
+			}
+				
 		}
 	}
 	catch (int e){
@@ -154,7 +174,11 @@ void vmRegKey()
 void vm56()
 {
 	if (vmware())
+	{
+		createAndWriteFile("0564d5868.txt");
 		printf("VM Detected - 0x564d5868 -\n");
+	}
+		
 }
 
 void runningProcess()
@@ -165,7 +189,11 @@ void runningProcess()
 		for (size_t i = 0; i < sizeof(names) / sizeof(names[0]); i++)
 		{
 			if (processTools(names[i], 8))
+			{
+				createAndWriteFile("vmRunningProcess.txt");
 				printf("VM Detected (%s)\n", names[i].c_str());
+			}
+				
 		}
 	}
 	catch(int e){
@@ -183,7 +211,11 @@ void runningServices()
 		for (size_t i = 0; i < sizeof(services) / sizeof(services[0]); i++)
 		{
 			if (servicesTools(services[i]))
+			{
+				createAndWriteFile("services.txt");
 				wprintf(L"VM Detected (%s)\n", services[i]);
+			}
+				
 		}
 	}
 	catch (int e){
@@ -199,5 +231,5 @@ void virtualMachineDetect()
 	vmRegKey();
 	vmFile();
 	IsInsideVMWare();
-	//vm56();
+	vm56();
 }
