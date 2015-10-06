@@ -1,3 +1,11 @@
 # cuckoo_detection_tool
 
-Sandbox And Virtual Machine Detect
+VirtualBox Detection Tool
+
+VMWare Detection Tool
+
+Cuckoo Sandbox Detection Tool
+
+Anubis Detection Detection Tool ( Worked on)
+
+Thread Expert Detection Tool ( Worked on)
