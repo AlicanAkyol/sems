@@ -13,7 +13,16 @@ void computerNameAnubis()
 	}
 }
 
+void sandboxieDetect()
+{
+	if (GetModuleHandle((LPCWSTR)"sbiedll.dll") != NULL) {
+		createAndWriteFile("sandboxie.txt");
+		printf("Sandboxie Detected \n");
+	}
+}
+
 void anubisDetect()
 {
 	computerNameAnubis();
+	sandboxieDetect();
 }

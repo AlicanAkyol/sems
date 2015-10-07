@@ -120,6 +120,19 @@ void vmRegVal()
 					createAndWriteFile("vmdetectedIdentifier.txt");
 					printf("VM Detected (%s)\n", "Identifier");
 				}
+
+				if (CheckReg(str, "Identifier", "QEMU", ""))
+				{
+					createAndWriteFile("QEMU.txt");
+					printf("QEMU Detected (%s)\n", "Identifier");
+				}
+
+				str = "HARDWARE\\Description\\System";
+				if (CheckReg(str, "SystemBiosVersion", "QEMU", ""))
+				{
+					createAndWriteFile("QEMU.txt");
+					printf("QEMU Detected (%s)\n", "SystemBiosVersion");
+				}
 					
 			}
 		}
