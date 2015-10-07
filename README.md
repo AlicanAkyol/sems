@@ -9,3 +9,7 @@ Cuckoo Sandbox Detection Tool
 Anubis Detection Detection Tool ( Worked on)
 
 Thread Expert Detection Tool ( Worked on)
+
+Sandboxie Detection Tool (Worked on)
+
+QEMU Detection Tool (Worked on)
