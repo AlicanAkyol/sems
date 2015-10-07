@@ -244,5 +244,5 @@ void virtualMachineDetect()
 	vmRegKey();
 	vmFile();
 	IsInsideVMWare();
-	vm56();
+	//vm56();
 }
