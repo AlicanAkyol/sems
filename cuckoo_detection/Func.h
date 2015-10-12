@@ -12,7 +12,7 @@ DWORD fileExist(char *filename);
 string resultKey(char * value);
 char * Mac();
 bool CheckReg(string value, string valueName, string key, string key2);
-bool CheckEnum(char * subkey, int choice);
+int CheckEnum(char * subkey, int choice);
 bool processTools(string process, int size);
 bool servicesTools(wchar_t * value);
 void checkCoreNumber();

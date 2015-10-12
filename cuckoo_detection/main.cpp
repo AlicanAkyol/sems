@@ -1,4 +1,4 @@
-/* VirtualBox, VMWare, Threat Expert, Anubis and Cuckoo Sandbox detection tool.
+/* VirtualBox, VMWare, Analysis Tools, Threat Expert, Anubis and Cuckoo Sandbox detection tool.
  * v1.0
 */
 
@@ -10,6 +10,7 @@ int main()
 	threatExpertDetect();
 	cuckooDetect();
 	virtualMachineDetect();
-	virtualBoxDetect();	
+	virtualBoxDetect();
+	analysisToolsDetect();
 	getchar();
 }

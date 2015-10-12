@@ -1,3 +1,7 @@
+/*VirtualMachine detection tool
+* v1.0
+*/
+
 #include "Func.h"
 
 void IsInsideVMWare()
@@ -203,7 +207,7 @@ void runningProcess()
 		{
 			if (processTools(names[i], 8))
 			{
-				createAndWriteFile("vmRunningProcess.txt");
+				createAndWriteFile("runningProcess.txt");
 				printf("VM Detected (%s)\n", names[i].c_str());
 			}
 				
@@ -225,7 +229,7 @@ void runningServices()
 		{
 			if (servicesTools(services[i]))
 			{
-				createAndWriteFile("services.txt");
+				createAndWriteFile("runningServices.txt");
 				wprintf(L"VM Detected (%s)\n", services[i]);
 			}
 				

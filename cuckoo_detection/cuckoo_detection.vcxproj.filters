@@ -39,6 +39,9 @@
     <ClCompile Include="ThreatExpert.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AnalysisTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="dllandFunctions.txt">

@@ -110,9 +110,9 @@ bool CheckReg(string value, string valueName, string key, string key2)
 	return flag;
 }
 
-bool CheckEnum(char * subkey, int choice)
+int CheckEnum(char * subkey, int choice)
 {
-	bool flag = false;
+	int flag = 0;
 	HKEY HK = 0;
 	if ((ERROR_SUCCESS ==
 		RegOpenKeyExA(HKEY_LOCAL_MACHINE, subkey, 0, KEY_READ, &HK)) && HK)
@@ -166,12 +166,12 @@ bool CheckEnum(char * subkey, int choice)
 										if (choice == 1)
 										{
 											if (strstr(res.c_str(), "vbox"))
-												flag = true;
+												flag = 1;
 										}
 										else
 										{
 											if (strstr(res.c_str(), "vmware"))
-												flag = true;
+												flag = 2;
 										}
 										
 									}

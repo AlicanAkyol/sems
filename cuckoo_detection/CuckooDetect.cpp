@@ -148,7 +148,7 @@ void functionHookedByCuckoo()
 					addr = GetProcAddress(LoadLibraryA(functions[i][0].c_str()), functions[i][j].c_str());
 					if (addr == 0x00000000) continue;
 					else if (*(BYTE *)addr == 0xE9) {
-						createAndWriteFile("hook.txt");
+						createAndWriteFile("functionHookedByCuckoo.txt");
 						printf("Cuckoo detected (Function hook)!!\n"); break;
 					}
 				}

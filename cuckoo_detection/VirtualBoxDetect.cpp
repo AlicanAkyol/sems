@@ -106,36 +106,40 @@ void vboxBios()
 	if (CheckReg("HARDWARE\\DESCRIPTION\\System", "SystemBiosVersion", "vbox", ""))
 	{
 		createAndWriteFile("vboxBios1.txt");
-		printf("VirtualBox Detected");
+		printf("VirtualBox Detected(vboxBios1) \n");
 	}
 		
 	if (CheckReg("HARDWARE\\DESCRIPTION\\System", "VideoBiosVersion", "oracle", "virtualbox"))
 	{
 		createAndWriteFile("vboxBios2.txt");
-		printf("VirtualBox Detected");
+		printf("VirtualBox Detected(vboxBios2) \n");
 	}
 		
 	if (CheckReg("HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0",
 		"Identifier", "vbox", ""))
 	{
 		createAndWriteFile("vboxBios3.txt");
-		printf("VirtualBox Detected");
+		printf("VirtualBox Detected(vboxBios3) \n");
 	}
 		
 	if (CheckReg("SYSTEM\\CurrentControlSet\\Control\\SystemInformation", "SystemProductName", "virtualbox", ""))
 	{
 		createAndWriteFile("vboxBios4.txt");
-		printf("VirtualBox Detected");
-	}
-		
+		printf("VirtualBox Detected(vboxBios4) \n");
+	}		
 }
 
 void vobxEnum()
 {
-	if (CheckEnum("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1))
+	if (CheckEnum("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1) == 1)
 	{
 		createAndWriteFile("vboxenum.txt");
-		printf("VirtualBox Detected");
+		printf("VirtualBox Detected (Enum)\n");
+	}
+	else if (CheckEnum("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1) == 2)
+	{
+		createAndWriteFile("vmenum.txt");
+		printf("VMWare Detected (Enum)\n");
 	}
 		
 }

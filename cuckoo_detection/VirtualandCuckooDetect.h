@@ -9,5 +9,6 @@ void cuckooDetect();
 void antiVirtualMachineDetect();
 void anubisDetect();
 void threatExpertDetect();
+void analysisToolsDetect();
 
 #endif
