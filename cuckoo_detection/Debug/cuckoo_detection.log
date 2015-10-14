@@ -1,7 +1,8 @@
-﻿Build started 12.10.2015 15:25:53.
+﻿Build started 13.10.2015 13:48:25.
      1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\debug\antivirtualmachinedetect.obj' because it is being used by another process.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnalysisTools.cpp AntiVirtualMachineDetect.cpp AnubisDetect.cpp CuckooDetect.cpp Functions.cpp main.cpp ThreatExpert.cpp VirtualBoxDetect.cpp VirtualMachineDetect.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_USING_V110_SDK71_" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnalysisTools.cpp AntiVirtualMachineDetect.cpp AnubisDetect.cpp CuckooDetect.cpp Functions.cpp main.cpp ThreatExpert.cpp VirtualBoxDetect.cpp VirtualMachineDetect.cpp
          VirtualMachineDetect.cpp
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(62): warning C4101: 'e' : unreferenced local variable
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(90): warning C4101: 'e' : unreferenced local variable
@@ -39,7 +40,7 @@
          Generating Code...
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(66): warning C4715: 'vmware' : not all control paths return a value
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.lib" /MACHINE:X86 Debug\AnalysisTools.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.pdb" /SUBSYSTEM:CONSOLE,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.lib" /MACHINE:X86 Debug\AnalysisTools.obj
          Debug\AntiVirtualMachineDetect.obj
          Debug\AnubisDetect.obj
          Debug\CuckooDetect.obj
@@ -53,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:07.65
+Time Elapsed 00:00:06.52
