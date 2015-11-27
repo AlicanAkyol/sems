@@ -1,4 +1,4 @@
-# cuckoo_detection_tool
+# Anti Sandbox and Anti Virtual Machines Tool
 
 VirtualBox Detection Tool
 
