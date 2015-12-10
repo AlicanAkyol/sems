@@ -3,12 +3,12 @@ The project is maked for malware analyzer.
 
 ###VirtualBox Detection Tool
 -Files
-![alt text]-Regedit
-![alt text]-Folder
-![alt text]-Services
-![alt text]-Bios
-![alt text]-Window
-![alt text]-Mac
+-Regedit
+-Folder
+-Services
+-Bios
+-Window
+-Mac
 
 ###VMWare Detection Tool
 -Process
