@@ -1,7 +1,7 @@
 # Anti Sandbox and Anti Virtual Machines Tool
 The project is maked for malware analyzer. 
 
-#VirtualBox Detection Tool
+###VirtualBox Detection Tool
 -Files
 -Regedit
 -Folder
@@ -10,7 +10,7 @@ The project is maked for malware analyzer.
 -Window
 -Mac
 
-#VMWare Detection Tool
+###VMWare Detection Tool
 -Process
 -Services
 -Regedit
@@ -18,7 +18,7 @@ The project is maked for malware analyzer.
 -Magicnumber
 -Mac
 
-#Cuckoo Sandbox Detection Tool
+###Cuckoo Sandbox Detection Tool
 -Core Number
 -Port scanner
 -agent
@@ -28,20 +28,20 @@ The project is maked for malware analyzer.
 -Folders
 -Hooked
 
-#Anubis Detection Detection Tool ( Worked on)
+###Anubis Detection Detection Tool ( Worked on)
 -Computer name
 
-#Thread Expert Detection Tool ( Worked on)
+###Thread Expert Detection Tool ( Worked on)
 -Computer name
 
-#Sandboxie Detection Tool (Worked on)
+###Sandboxie Detection Tool (Worked on)
 -sbiedll
 
-#QEMU Detection Tool (Worked on)
+###QEMU Detection Tool (Worked on)
 -Regedit
 -Bios
 
-#Analysis Tools Detection Tool
+###Analysis Tools Detection Tool
 -Immunity debugger
 -IDA pro
 -Process hacker
