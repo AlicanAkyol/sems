@@ -58,6 +58,15 @@ void regshotDetect()
 	}
 }
 
+void wiresharkDetect()
+{
+	if (processTools("Wireshark", 9))
+	{
+		createAndWriteFile("WiresharkDetect.txt");
+		printf("Wireshark detect \n");
+	}
+}
+
 void analysisToolsDetect()
 {
 	immunityDetect();
@@ -65,5 +74,6 @@ void analysisToolsDetect()
 	processExplorerDetect();
 	processMonitorDetect();
 	idaqDetect();
+	wiresharkDetect();
 	regshotDetect();
 }

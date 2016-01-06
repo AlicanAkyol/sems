@@ -13,9 +13,17 @@ string resultKey(char * value);
 char * Mac();
 bool CheckReg(string value, string valueName, string key, string key2);
 int CheckEnum(char * subkey, int choice);
+int CheckEnum2(char * subkey, int choice);
 bool processTools(string process, int size);
 bool servicesTools(wchar_t * value);
 void checkCoreNumber();
+void checkInternet();
 void createAndWriteFile(char *fileName);
-TCHAR * getComputerName();
+string getComputerName();
+bool dirExists(const string& dirName_in);
+vector<string> split(string str, char delimiter);
+void DiskSpace();
+void searchFile(int id_text);
+const BYTE* readResource(int id_text);
+bool replace(std::string& str, const std::string& from, const std::string& to);
 #endif

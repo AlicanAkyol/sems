@@ -83,11 +83,12 @@
   <ItemGroup>
     <ClCompile Include="AnalysisTools.cpp" />
     <ClCompile Include="AntiVirtualMachineDetect.cpp" />
-    <ClCompile Include="AnubisDetect.cpp" />
+    <ClCompile Include="SomeSandboxesDetect.cpp" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="CuckooDetect.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ThreatExpert.cpp" />
+    <ClCompile Include="someEnvironments.cpp" />
     <ClCompile Include="VirtualBoxDetect.cpp" />
     <ClCompile Include="VirtualMachineDetect.cpp" />
   </ItemGroup>
@@ -97,7 +98,15 @@
   <ItemGroup>
     <ClInclude Include="Func.h" />
     <ClInclude Include="headers.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="VirtualandCuckooDetect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="text1.bin" />
+    <None Include="text3.bin" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

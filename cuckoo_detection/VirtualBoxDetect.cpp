@@ -42,7 +42,7 @@ void vboxFile()
 	string files[20] = { "C:\\WINDOWS\\system32\\drivers\\VBoxMouse.sys", 
 		"C:\\WINDOWS\\system32\\drivers\\VBoxGuest.sys", "C:\\WINDOWS\\system32\\drivers\\VBoxSF.sys",
 		"C:\\WINDOWS\\system32\\drivers\\VBoxVideo.sys", "C:\\WINDOWS\\system32\\vboxdisp.dll", 
-		"C:\\WINDOWS\\system32\\vboxhook.dll", "C:\\WINDOWS\\system32\\vboxmrxnp.dll", "C:\\WINDOWS\\system32\\vboxogl.dll", 
+		"C:\\WINDOWS\\system32\\vboxhook.dll", "C:\\\\WINDOWS\\system32\\vboxmrxnp.dll", "C:\\WINDOWS\\system32\\vboxogl.dll", 
 		"C:\\WINDOWS\\system32\\vboxoglarrayspu.dll", "C:\\WINDOWS\\system32\\vboxoglcrutil.dll", 
 		"C:\\WINDOWS\\system32\\vboxoglerrorspu.dll", "C:\\WINDOWS\\system32\\vboxoglfeedbackspu.dll", 
 		"C:\\WINDOWS\\system32\\vboxoglpackspu.dll", "C:\\WINDOWS\\system32\\vboxoglpassthroughspu.dll", 
@@ -131,6 +131,18 @@ void vboxBios()
 
 void vobxEnum()
 {
+	if (CheckEnum2("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1) == 1)
+	{
+		createAndWriteFile("vboxenum.txt");
+		printf("VirtualBox Detected (Enum)\n");
+	}
+
+	else if (CheckEnum2("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1) == 2)
+	{
+		createAndWriteFile("vmenum.txt");
+		printf("VMWare Detected (Enum)\n");
+	}
+
 	if (CheckEnum("SYSTEM\\CurrentControlSet\\Enum\\IDE", 1) == 1)
 	{
 		createAndWriteFile("vboxenum.txt");
@@ -160,7 +172,7 @@ void vobxAcpi()
 		}
 	}
 	catch (int e){
-		perror("ERROR");
+		
 	}
 }
 
@@ -181,7 +193,6 @@ void vboxDevices()
 		}
 	}
 	catch (int e){
-		perror("ERROR");
 	}	
 }
 
@@ -206,21 +217,86 @@ void vboxMac()
 		}
 	}
 	catch (int e){
-		perror("ERROR");
 	}	
 }
 
 void virtualBoxDetect()
 {
-	vboxguest();
-	vboxTrayIPC();
-	vboxTrayTool();
-	vboxShared();
-	vobxAcpi();
-	vobxEnum();
-	vboxBios();
-	vboxServices();
-	vboxFile();
-	vboxDevices();
-	vboxMac();
+	try{
+		vboxguest();
+	}
+	catch (int e)
+	{
+		
+	}
+	try{
+		vboxTrayIPC();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxTrayTool();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxShared();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vobxAcpi();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxBios();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxServices();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxFile();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxDevices();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vobxEnum();
+	}
+	catch (int e)
+	{
+
+	}
+	try{
+		vboxMac();
+	}
+	catch (int e)
+	{
+
+	}
 }

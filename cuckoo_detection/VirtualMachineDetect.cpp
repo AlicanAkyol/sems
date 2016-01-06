@@ -1,4 +1,6 @@
 /*VirtualMachine detection tool
+* Resources
+*  -ScoopyNG
 * v1.0
 */
 
@@ -95,7 +97,7 @@ void vmFile()
 void vmRegVal()
 {
 	string arr[13][4] = { { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "VMware User Process", "", "" },
-	{ "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\SharedDlls", "C:\WINDOWS\system32\VMUpgradeAtShutdownWXP.dll", "", "" },
+	{ "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\SharedDlls", "C:\\WINDOWS\\system32\\VMUpgradeAtShutdownWXP.dll", "", "" },
 	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
 	"DriverDesc", "vmware svga ii", "" },
 	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
@@ -240,6 +242,109 @@ void runningServices()
 	}	
 }
 
+void memory()
+{
+	unsigned int	a = 0;
+	__try {
+		__asm {
+
+			// save register values on the stack
+				push eax
+				push ebx
+				push ecx
+				push edx
+
+				// perform fingerprint
+				mov eax, 'VMXh'		// VMware magic value (0x564D5868)
+				mov ecx, 14h		// get memory size command (0x14)
+				mov dx, 'VX'		// special VMware I/O port (0x5658)
+
+				in eax, dx			// special I/O cmd
+
+				mov a, eax			// data 
+
+				// restore register values from the stack
+				pop edx
+				pop ecx
+				pop ebx
+				pop eax
+		}
+	}
+	__except (EXCEPTION_EXECUTE_HANDLER) {}
+
+	if (a > 0)
+	{
+		createAndWriteFile("vmmemory.txt");
+		wprintf(L"VM Detected (memory)\n");
+	}
+}
+
+void version()
+{
+	unsigned int	a, b;
+
+	__try {
+		__asm {
+
+			// save register values on the stack
+				push eax
+				push ebx
+				push ecx
+				push edx
+
+				// perform fingerprint
+				mov eax, 'VMXh'	// VMware magic value (0x564D5868)
+				mov ecx, 0Ah		// special version cmd (0x0a)
+				mov dx, 'VX'		// special VMware I/O port (0x5658)
+
+				in eax, dx			// special I/O cmd
+
+				mov a, ebx			// data 
+				mov b, ecx			// data	(eax gets also modified but will not be evaluated)
+
+				// restore register values from the stack
+				pop edx
+				pop ecx
+				pop ebx
+				pop eax
+		}
+	}
+	__except (EXCEPTION_EXECUTE_HANDLER) {}
+
+	
+
+	if (a == 'VMXh') 		// is the value equal to the VMware magic value?
+	{
+		createAndWriteFile("vmversion.txt");
+		wprintf(L"VM Detected (version)\n");
+	}
+		
+}
+
+void vmMac()
+{
+	try
+	{
+		char *mac = strtok(Mac(), ":");
+		if (strcmp(mac, "00") == 0)
+		{
+			mac = strtok(NULL, ":");
+			if (strcmp(mac, "0c") == 0)
+			{
+				mac = strtok(NULL, ":");
+				if (strcmp(mac, "29") == 0)
+				{
+					createAndWriteFile("vmmac.txt");
+
+					printf("VMWare Detected (MAC)\n");
+				}
+			}
+		}
+	}
+	catch (int e){
+	}
+}
+
 void virtualMachineDetect()
 {
 	runningProcess();
@@ -248,5 +353,8 @@ void virtualMachineDetect()
 	vmRegKey();
 	vmFile();
 	IsInsideVMWare();
+	memory();
+	version();
+	vmMac();
 	//vm56();
 }
