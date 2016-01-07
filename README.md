@@ -10,6 +10,7 @@ The project is maked for malware analyzer.
   - Mac
   - Bios
   - Window
+
 ### VMWare Detection
   - Files
   - Folder
@@ -19,10 +20,12 @@ The project is maked for malware analyzer.
   - Bios
   - Window
   - Magic
+
 ### QEMU Detection
   - Regedit
   - Bios
   - CPU
+
 ### Cuckoo Sandbox Detection
   - Files
   - Folder
@@ -31,16 +34,20 @@ The project is maked for malware analyzer.
   - Core Number
   - Pipe
   - Modules
+
 ### Anubis Detection
   - Core Number
   - Computer Name
+
 ### Thread Expert Detection
   - Computer Name
   - Core Number
+
 ### Some Sandboxes Detection
   - Computer Name
   - Core Number
   - Modules
+
 ### Analysis Tools Detection
   - Immunity Debugger
   - Ollydbg
