@@ -1,51 +1,53 @@
-# Anti Sandbox and Anti Virtual Machines Tool
-The project is maked for malware analyzer. 
+# Anti Sandbox and Anti Virtual Machine Tool
 
-###VirtualBox Detection Tool
--Files
--Regedit
--Folder
--Services
--Bios
--Window
--Mac
+The project is maked for malware analyzer.
 
-###VMWare Detection Tool
--Process
--Services
--Regedit
--Files
--Magicnumber
--Mac
-
-###Cuckoo Sandbox Detection Tool
--Core Number
--Port scanner
--agent
--pipe
--Cuckoomon
--Files
--Folders
--Hooked
-
-###Anubis Detection Detection Tool ( Worked on)
--Computer name
-
-###Thread Expert Detection Tool ( Worked on)
--Computer name
-
-###Sandboxie Detection Tool (Worked on)
--sbiedll
-
-###QEMU Detection Tool (Worked on)
--Regedit
--Bios
-
-###Analysis Tools Detection Tool
--Immunity debugger
--IDA pro
--Process hacker
--Process monitor
--Process explorer
--Regshot
--Wireshark
+### VirtualBox Detection
+  - Files
+  - Regedit
+  - Folder
+  - Services
+  - Mac
+  - Bios
+  - Window
+### VMWare Detection
+  - Files
+  - Folder
+  - Regedit
+  - Services
+  - Mac
+  - Bios
+  - Window
+  - Magic
+### QEMU Detection
+  - Regedit
+  - Bios
+  - CPU
+### Cuckoo Sandbox Detection
+  - Files
+  - Folder
+  - Port
+  - Hooked Function
+  - Core Number
+  - Pipe
+  - Modules
+### Anubis Detection
+  - Core Number
+  - Computer Name
+### Thread Expert Detection
+  - Computer Name
+  - Core Number
+### Some Sandboxes Detection
+  - Computer Name
+  - Core Number
+  - Modules
+### Analysis Tools Detection
+  - Immunity Debugger
+  - Ollydbg
+  - Ida Pro
+  - Regshot
+  - Fiddler
+  - Wireshark
+  - Process Monitor
+  - Process Hacker
+  - Process Explorer
