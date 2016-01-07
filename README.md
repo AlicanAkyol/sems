@@ -1,6 +1,6 @@
 # Anti Sandbox and Anti Virtual Machine Tool
 
-The project is maked for malware analyzer.
+The project is maked for malware researcher.
 
 ### VirtualBox Detection
   - Files
