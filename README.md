@@ -35,18 +35,14 @@ The project is maked for malware researcher.
   - Pipe
   - Modules
 
-### Anubis Detection
-  - Core Number
-  - Computer Name
-
-### Thread Expert Detection
-  - Computer Name
-  - Core Number
-
 ### Some Sandboxes Detection
+Anubis , Thread Expert , Cuckoo , Sandboxie , CWSandbox
   - Computer Name
   - Core Number
   - Modules
+  - Check internet
+  - Disk spaces
+  - Files
 
 ### Analysis Tools Detection
   - Immunity Debugger
