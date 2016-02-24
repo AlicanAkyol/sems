@@ -446,6 +446,58 @@ bool replace(std::string& str, const std::string& from, const std::string& to) {
 	return true;
 }
 
+bool command(char * fileName)
+{
+	string cmdString = "cd c:\\ & dir *";
+	string searchCmd = "* /s /p";
+	cmdString.append(fileName);
+	cmdString.append(searchCmd);
+	FILE *fp;
+	const char * cmd = cmdString.c_str();
+	
+	char line[1000];
+	string result[100][101];
+	int count = 0;
+	bool flag = false, flag2 = false, result_flag = false;
+	try
+	{
+		fp = _popen(cmd, "r");
+		while (fgets(line, sizeof line, fp) && count<100)
+		{
+			if (strstr(line, "Directory of"))
+			{
+				flag = true;
+				result[count][0] = line;
+			}
+			else if (flag && !flag2)
+			{
+				flag2 = true;
+			}
+			else if (flag && flag2)
+			{
+				char *findingFile = strtok(line, " ");
+				for (int i = 0; i<3; i++)findingFile = strtok(NULL, " ");
+				flag = flag2 = false;
+				result[count][count + 1] = findingFile;
+				count++;
+				result_flag = true;
+			}
+		}
+		_pclose(fp);
+	}
+	catch (int e)
+	{
+		perror("");
+	}
+	return result_flag;
+}
+
+string eraseString(string str, char val)
+{
+	str.erase(remove(str.begin(), str.end(), val), str.end());
+	return str;
+}
+
 void searchFile(int id_text)
 {
 	WIN32_FIND_DATAA file;
@@ -511,10 +563,10 @@ void DiskSpace()
 			if (fgets(buffer, 128, pipe.get()) != NULL)
 			{
 				result = buffer;
-				result.erase(remove(result.begin(), result.end(), ' '), result.end());
-				result.erase(remove(result.begin(), result.end(), '\r'), result.end());
-				result.erase(remove(result.begin(), result.end(), '\n'), result.end());
-				if (result != "Size")
+				result = eraseString(result, ' ');
+				result = eraseString(result, '\r');
+				result = eraseString(result, '\n');
+				if (result != "Size" && result !="" && result != " ")
 				{
 					diskSpace = stod(result) / (1024 * 1024 * 1024);
 					if (diskSpace < 60)

@@ -87,50 +87,9 @@ void pipe()
 	}
 }
 
-bool command()
-{
-	char *cmd = "cd c:\\ & dir *cuckoo* /s /p";
-	FILE *fp;
-	char line[1000];
-	string result[100][101];
-	int count = 0;
-	bool flag = false, flag2 = false, result_flag = false;
-	try
-	{
-		fp = _popen(cmd, "r");
-		while (fgets(line, sizeof line, fp) && count<100)
-		{
-			if (strstr(line, "Directory of"))
-			{
-				flag = true;
-				result[count][0] = line;
-			}
-			else if (flag && !flag2)
-			{
-				flag2 = true;
-			}
-			else if (flag && flag2)
-			{
-				char *findingFile = strtok(line, " ");
-				for (int i = 0; i<3; i++)findingFile = strtok(NULL, " ");
-				flag = flag2 = false;
-				result[count][count + 1] = findingFile;
-				count++;
-				result_flag = true;
-			}
-		}
-		_pclose(fp);
-	}
-	catch (int e)
-	{
-		perror("");
-	}
-	return result_flag;
-}
-
 void cuckoo()
 {
-	if (command())
+	if (command("cuckoo"))
 	{
 		createAndWriteFile("cuckoo.txt");
 		printf("Cuckoo detected (Files)\n");

@@ -1,4 +1,3 @@
-c:\php\deplister.exe
 c:\agent\MemoryDump.dll
 c:\bin\AHookMonitor.dll
 c:\MWS\bin\agent\hipsengine32.dll

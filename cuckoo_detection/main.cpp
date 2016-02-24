@@ -11,7 +11,6 @@ int main()
 	virtualMachineDetect();
 	virtualBoxDetect();
 	analysisToolsDetect();
-	analysisToolsDetect();
 	control();
 	getchar();
 }

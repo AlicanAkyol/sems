@@ -1,0 +1,22 @@
+dumpcap.exe
+ZxSniffer.exe
+Aircrack-ng Gui.exe
+observer.exe
+tcpdump.exe
+WinDump.exe
+wspass.exe
+Regshot.exe
+ollydbg.exe
+PEBrowseDbg.exe
+windbg.exe
+DrvLoader.exe
+SymRecv.exe
+Syser.exe
+apis32.exe
+VBoxService.exe
+VBoxTray.exe
+SbieSvc.exe
+SbieCtrl.exe
+SandboxieRpcSs.exe
+SandboxieDcomLaunch.exe
+SUPERAntiSpyware.exe

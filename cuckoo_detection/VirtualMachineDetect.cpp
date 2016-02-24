@@ -69,24 +69,33 @@ unsigned vmware(void)
 
 void vmFile()
 {
-	string files[20] = { "C:\\WINDOWS\\system32\\vm3dgl64.dll", "C:\\WINDOWS\\system32\\vm3dgl.dll",
-		"C:\\WINDOWS\\system32\\vm3dum64.dll", "C:\\WINDOWS\\system32\\vm3dum.dll", 
+	string stringVmFiles[20] =
+	{
+		"C:\\WINDOWS\\system32\\vm3dgl64.dll",
+		"C:\\WINDOWS\\system32\\vm3dgl.dll",
+		"C:\\WINDOWS\\system32\\vm3dum64.dll",
+		"C:\\WINDOWS\\system32\\vm3dum.dll",
 		"C:\\WINDOWS\\system32\\VmbuxCoinstaller.dll",
-		"C:\\WINDOWS\\system32\\vmGuestLib.dll", "C:\\WINDOWS\\system32\\vmGuestLibJava.dll",
-		"C:\\WINDOWS\\system32\\vmhgfs.dll", "C:\\WINDOWS\\system32\\vmicsvc.exe", 
-		"C:\\WINDOWS\\system32\\vmwogl32.dll", "C:\\WINDOWS\\system32\\vmmreg32.dll",
-		"C:\\WINDOWS\\system32\\vmx_fb.dll", "C:\\WINDOWS\\system32\\vmx_mode.dll",
-		"C:\\WINDOWS\\system32\\VMUpgradeAtShutdownWXP.dll" };
+		"C:\\WINDOWS\\system32\\vmGuestLib.dll",
+		"C:\\WINDOWS\\system32\\vmGuestLibJava.dll",
+		"C:\\WINDOWS\\system32\\vmhgfs.dll",
+		"C:\\WINDOWS\\system32\\vmicsvc.exe",
+		"C:\\WINDOWS\\system32\\vmwogl32.dll",
+		"C:\\WINDOWS\\system32\\vmmreg32.dll",
+		"C:\\WINDOWS\\system32\\vmx_fb.dll",
+		"C:\\WINDOWS\\system32\\vmx_mode.dll",
+		"C:\\WINDOWS\\system32\\VMUpgradeAtShutdownWXP.dll"
+	};
+
 	try
 	{
-		for (size_t i = 0; i < sizeof(files) / sizeof(files[0]); i++)
+		for (size_t i = 0; i < sizeof(stringVmFiles) / sizeof(stringVmFiles[0]); i++)
 		{
-			if (fileExist((char*)files[i].c_str()) != INVALID_FILE_ATTRIBUTES)
+			if (fileExist((char*)stringVmFiles[i].c_str()) != INVALID_FILE_ATTRIBUTES)
 			{
 				createAndWriteFile("vmfile.txt");
-				printf("VM Detected (%s)\n", files[i].c_str());
-			}
-				
+				printf("VM Detected (%s)\n", stringVmFiles[i].c_str());
+			}	
 		}
 	}
 	catch (int e){
@@ -95,22 +104,59 @@ void vmFile()
 }
 
 void vmRegVal()
-{
-	string arr[13][4] = { { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "VMware User Process", "", "" },
-	{ "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\SharedDlls", "C:\\WINDOWS\\system32\\VMUpgradeAtShutdownWXP.dll", "", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
-	"DriverDesc", "vmware svga ii", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
-	"DriverDesc", "vmware svga 3d", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0000",
-	"InfSection", "vmmouse", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
-	"DriverDesc", "vmware vmscsi controller", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Video\\{4BEF3D64-1F2B-4026-9EE4-B6D8CD9FEA1B}\\0000",
-	"Device Description", "vmware svga ii", "" },
-	{ "SYSTEM\\CurrentControlSet\\Control\\Video\\{3A8088C5-4419-4572-801C-A10BA858952F}\\0000",
-	"Device Description", "vmware svga 3d", "" } };
-	
+{	
+	string stringVmRegVals[25][4] =
+	{ 
+		{ "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "VMware User Process", "", "" },
+		{ "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Setup\\SharedDlls", "C:\\WINDOWS\\system32\\VMUpgradeAtShutdownWXP.dll", "", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
+		"DriverDesc", "vmware svga ii", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
+		"DriverDesc", "vmware svga 3d", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0000",
+		"InfSection", "vmmouse", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000",
+		"DriverDesc", "vmware vmscsi controller", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Video\\{4BEF3D64-1F2B-4026-9EE4-B6D8CD9FEA1B}\\0000",
+		"Device Description", "vmware svga ii", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Video\\{3A8088C5-4419-4572-801C-A10BA858952F}\\0000",
+		"Device Description", "vmware svga 3d", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"DriverDesc", "VMware Pointing Device", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0000",
+		"ProviderName", "VMware, Inc.", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0001",
+		"DriverDesc", "VMware USB Pointing Device", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0001",
+		"InfSection", "VMUsbMouse", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E96F-E325-11CE-BFC1-08002BE10318}\\0001",
+		"ProviderName", "VMware, Inc.", "" },
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"HardwareInformation.AdapterString", "VMware SVGA 3D", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"HardwareInformation.ChipType", "VMware Virtual SVGA 3D Graphics Adapter", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"InfSection", "VM3D_AMD64", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"InstalledDisplayDrivers", "vm3dum64", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"InstalledDisplayDrivers", "vm3dum", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"InstalledDisplayDrivers", "vm3dgl64", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"InstalledDisplayDrivers", "vm3dgl", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"OpenGLDriverName", "vm3dgl64.dll", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"OpenGLDriverNameWow", "vm3dgl.dll", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"ProviderName", "VMware, Inc.", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"UserModeDriverName", "vm3dum64.dll", "" }, 
+		{ "SYSTEM\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000", 
+		"UserModeDriverNameWow", "vm3dum.dll", "" }
+	};
+
 	string val1[] = { "Scsi Port 0", "Scsi Port 1", "Scsi Port 2", "Scsi Port 3", "Scsi Port 4" };
 	string val2[] = { "Scsi Bus 0", "Scsi Bus 1", "Scsi Bus 2", "Scsi Bus 3", "Scsi Bus 4", "Scsi Bus 5", "Scsi Bus 6" };
 	try
@@ -120,7 +166,8 @@ void vmRegVal()
 			for (size_t j = 0; j < sizeof(val2) / sizeof(val2[0]); j++)
 			{
 				string str;
-				str = "HARDWARE\\DEVICEMAP\\Scsi\\" + val1[i] + "\\" + val2[j] + "\\Target Id 0\\Logical Unit Id 0";
+				str = "HARDWARE\\DEVICEMAP\\Scsi\\" + val1[i] + "\\" + val2[j] + 
+					"\\Target Id 0\\Logical Unit Id 0";
 				if (CheckReg(str, "Identifier", "vmware", ""))
 				{
 					createAndWriteFile("vmdetectedIdentifier.txt");
@@ -138,8 +185,7 @@ void vmRegVal()
 				{
 					createAndWriteFile("QEMU.txt");
 					printf("QEMU Detected (%s)\n", "SystemBiosVersion");
-				}
-					
+				}	
 			}
 		}
 	}
@@ -148,14 +194,14 @@ void vmRegVal()
 	}
 	try
 	{
-		for (size_t i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+		for (size_t i = 0; i < sizeof(stringVmRegVals) / sizeof(stringVmRegVals[0]); i++)
 		{
-			if (CheckReg(arr[i][0], arr[i][1], arr[i][2], arr[i][3]))
+			if (CheckReg(stringVmRegVals[i][0], stringVmRegVals[i][1], stringVmRegVals[i][2], 
+				stringVmRegVals[i][3]))
 			{
 				createAndWriteFile("vmdetected.txt");
-				printf("VM Detected (%s)\n", arr[i][1].c_str());
-			}
-				
+				printf("VM Detected (%s)\n", stringVmRegVals[i][1].c_str());
+			}	
 		}
 	}
 	catch (int e){
@@ -165,24 +211,38 @@ void vmRegVal()
 
 void vmRegKey()
 {
-	string keys[] = { "SOFTWARE\\Clients\\StartMenuInternet\\VMWAREHOSTOPEN.EXE",
-		"SOFTWARE\\VMware, Inc.\\VMware Tools", "SOFTWARE\\Microsoft\\ESENT\\Process\\vmtoolsd",
+	string stringVmRegKeys[19] =
+	{
+		"SOFTWARE\\Clients\\StartMenuInternet\\VMWAREHOSTOPEN.EXE",
+		"SOFTWARE\\VMware, Inc.\\VMware Tools",
+		"SOFTWARE\\Microsoft\\ESENT\\Process\\vmtoolsd",
 		"SYSTEM\\CurrentControlSet\\Enum\\IDE\\CdRomNECVMWar_VMware_SATA_CD01_______________1.00____",
 		"SYSTEM\\CurrentControlSet\\Enum\\IDE\\CdRomNECVMWar_VMware_IDE_CDR10_______________1.00____",
 		"SYSTEM\\CurrentControlSet\\Enum\\SCSI\\Disk&Ven_VMware_&Prod_VMware_Virtual_S&Rev_1.0",
 		"SYSTEM\\CurrentControlSet\\Enum\\SCSI\\Disk&Ven_VMware_&Prod_VMware_Virtual_S",
 		"SYSTEM\\CurrentControlSet\\Control\\CriticalDeviceDatabase\\root#vmwvmcihostdev",
-		"SYSTEM\\CurrentControlSet\\Control\\VirtualDeviceDrivers" };
+		"SYSTEM\\CurrentControlSet\\Control\\VirtualDeviceDrivers",
+		"SYSTEM\\CurrentControlSet\\Services\\IRIS5",
+		"SOFTWARE\\eEye Digital Security",
+		"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Wireshark",
+		"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\wireshark.exe",
+		"SOFTWARE\\ZxSniffer.exe",
+		"SOFTWARE\\Cygwin",
+		"SOFTWARE\\B Labs\\Bopup Observer",
+		"AppEvents\\Schemes\\Apps\\Bopup Observer",
+		"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Win Sniffer_is1",
+		"SOFTWARE\\Win Sniffer"
+	};
+
 	try
 	{
-		for (size_t i = 0; i < sizeof(keys) / sizeof(keys[0]); i++)
+		for (size_t i = 0; i < sizeof(stringVmRegKeys) / sizeof(stringVmRegKeys[0]); i++)
 		{
-			if (registerOpenKey((char *)keys[i].c_str()) == ERROR_SUCCESS)
+			if (registerOpenKey((char *)stringVmRegKeys[i].c_str()) == ERROR_SUCCESS)
 			{
 				createAndWriteFile("vmregKey.txt");
-				printf("VM Detected (%s)\n", keys[i].c_str());
-			}
-				
+				printf("Analysis environment detected (%s)\n", stringVmRegKeys[i].c_str());
+			}		
 		}
 	}
 	catch (int e){
@@ -233,8 +293,7 @@ void runningServices()
 			{
 				createAndWriteFile("runningServices.txt");
 				wprintf(L"VM Detected (%s)\n", services[i]);
-			}
-				
+			}	
 		}
 	}
 	catch (int e){
@@ -347,14 +406,51 @@ void vmMac()
 
 void virtualMachineDetect()
 {
-	runningProcess();
-	runningServices();
-	vmRegVal();
-	vmRegKey();
-	vmFile();
-	IsInsideVMWare();
-	memory();
-	version();
-	vmMac();
+	try
+	{
+		runningProcess();
+	}
+	catch (int e){}
+	try
+	{
+		runningServices();
+	}
+	catch (int e){}
+	try
+	{
+		vmRegVal();
+	}
+	catch (int e){}
+	try
+	{
+		vmRegKey();
+	}
+	catch (int e){}
+	try
+	{
+		vmFile();
+	}
+	catch (int e){}
+	try
+	{
+		IsInsideVMWare();
+	}
+	catch (int e){}
+	try
+	{
+		memory();
+	}
+	catch (int e){}
+	try
+	{
+		version();
+	}
+	catch (int e){}
+	try
+	{
+		vmMac();
+	}
+	catch (int e){}
+
 	//vm56();
 }

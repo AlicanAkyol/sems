@@ -45,11 +45,40 @@ void computerNameSandboxes()
 
 void someSandboxesDetect()
 {
-	computerNameSandboxes();
-	sandboxieDetect();
-	dbgDetect();
-	checkCoreNumber();
-	checkInternet();
-	DiskSpace();
-	searchFile(IDR_TEXT1);
+	try{
+		computerNameSandboxes();
+	}
+	catch (int e){
+	}
+	try{
+		sandboxieDetect();
+
+	}
+	catch (int e){
+	}
+	try{
+		dbgDetect();
+	}
+	catch (int e){
+	}
+	try{
+		checkCoreNumber();
+	}
+	catch (int e){
+	}
+	try{
+		checkInternet();
+	}
+	catch (int e){
+	}
+	try{
+		DiskSpace();
+	}
+	catch (int e){
+	}
+	try{
+		searchFile(IDR_TEXT1);
+	}
+	catch (int e){
+	}
 }

@@ -22,8 +22,11 @@ void createAndWriteFile(char *fileName);
 string getComputerName();
 bool dirExists(const string& dirName_in);
 vector<string> split(string str, char delimiter);
+string eraseString(string str, char val);
 void DiskSpace();
+bool command(char * fileName);
 void searchFile(int id_text);
 const BYTE* readResource(int id_text);
 bool replace(std::string& str, const std::string& from, const std::string& to);
+
 #endif

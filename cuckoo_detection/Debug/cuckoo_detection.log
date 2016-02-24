@@ -1,33 +1,42 @@
-﻿Build started 6.1.2016 16:16:08.
-     1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Build target(s)).
+﻿Build started 24.2.2016 14:41:35.
+     1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_USING_V110_SDK71_" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnalysisTools.cpp AntiVirtualMachineDetect.cpp SomeSandboxesDetect.cpp Control.cpp CuckooDetect.cpp Functions.cpp main.cpp someEnvironments.cpp VirtualBoxDetect.cpp VirtualMachineDetect.cpp
          VirtualMachineDetect.cpp
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(64): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(92): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(146): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(161): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(188): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(218): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(240): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(344): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(101): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(192): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(207): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(248): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(278): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(299): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(403): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(413): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(418): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(423): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(428): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(433): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(438): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(443): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(448): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualmachinedetect.cpp(453): warning C4101: 'e' : unreferenced local variable
          VirtualBoxDetect.cpp
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(35): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(63): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(174): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(195): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(219): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(228): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(235): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(242): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(249): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(256): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(263): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(270): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(277): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(284): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(291): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(298): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(41): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(82): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(193): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(214): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(238): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(247): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(254): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(261): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(268): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(275): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(282): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(289): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(296): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(303): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(310): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\virtualboxdetect.cpp(317): warning C4101: 'e' : unreferenced local variable
          someEnvironments.cpp
          main.cpp
          Functions.cpp
@@ -41,24 +50,31 @@
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(308): warning C4305: 'return' : truncation from 'int' to 'bool'
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(371): warning C4101: 'e' : unreferenced local variable
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(381): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(458): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(464): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(488): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(510): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\functions.cpp(516): warning C4018: '<' : signed/unsigned mismatch
          CuckooDetect.cpp
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(55): warning C4551: function call missing argument list
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(124): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(147): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(106): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(230): warning C4101: 'e' : unreferenced local variable
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(271): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(312): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(320): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(327): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(334): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(341): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(348): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(355): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(362): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(279): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(286): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(293): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(300): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(307): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(314): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\cuckoodetect.cpp(321): warning C4101: 'e' : unreferenced local variable
          Control.cpp
          SomeSandboxesDetect.cpp
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(41): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(51): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(57): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(62): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(67): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(72): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(77): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(82): warning C4101: 'e' : unreferenced local variable
          AntiVirtualMachineDetect.cpp
          AnalysisTools.cpp
          Generating Code...
@@ -78,8 +94,8 @@
          Debug\VirtualBoxDetect.obj
          Debug\VirtualMachineDetect.obj
          cuckoo_detection.vcxproj -> C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\Debug\cuckoo_detection.exe
-     1>Done Building Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.39
+Time Elapsed 00:00:07.70

@@ -18,17 +18,23 @@ void vboxguest()
 
 void vboxServices()
 {
-	string services[5] = { "SYSTEM\\ControlSet001\\Services\\VBoxGuest", "SYSTEM\\ControlSet001\\Services\\VBoxMouse",
-		"SYSTEM\\ControlSet001\\Services\\VBoxService", "SYSTEM\\ControlSet001\\Services\\VBoxSF",
-		"SYSTEM\\ControlSet001\\Services\\VBoxVideo" };
+	string stringVboxServices[5] =
+	{
+		"SYSTEM\\ControlSet001\\Services\\VBoxGuest",
+		"SYSTEM\\ControlSet001\\Services\\VBoxMouse",
+		"SYSTEM\\ControlSet001\\Services\\VBoxService",
+		"SYSTEM\\ControlSet001\\Services\\VBoxSF",
+		"SYSTEM\\ControlSet001\\Services\\VBoxVideo"
+	};
+
 	try
 	{
-		for (size_t i = 0; i < sizeof(services) / sizeof(services[0]); i++)
+		for (size_t i = 0; i < sizeof(stringVboxServices) / sizeof(stringVboxServices[0]); i++)
 		{
-			if (registerOpenKey((char*)(services[i].c_str())) == ERROR_SUCCESS)
+			if (registerOpenKey((char*)(stringVboxServices[i].c_str())) == ERROR_SUCCESS)
 			{
 				createAndWriteFile("vboxservices.txt");
-				printf("VirtualBox Detected (%s)\n", services[i].c_str());
+				printf("VirtualBox Detected (%s)\n", stringVboxServices[i].c_str());
 			}
 		}
 	}
@@ -39,23 +45,36 @@ void vboxServices()
 
 void vboxFile()
 {
-	string files[20] = { "C:\\WINDOWS\\system32\\drivers\\VBoxMouse.sys", 
-		"C:\\WINDOWS\\system32\\drivers\\VBoxGuest.sys", "C:\\WINDOWS\\system32\\drivers\\VBoxSF.sys",
-		"C:\\WINDOWS\\system32\\drivers\\VBoxVideo.sys", "C:\\WINDOWS\\system32\\vboxdisp.dll", 
-		"C:\\WINDOWS\\system32\\vboxhook.dll", "C:\\\\WINDOWS\\system32\\vboxmrxnp.dll", "C:\\WINDOWS\\system32\\vboxogl.dll", 
-		"C:\\WINDOWS\\system32\\vboxoglarrayspu.dll", "C:\\WINDOWS\\system32\\vboxoglcrutil.dll", 
-		"C:\\WINDOWS\\system32\\vboxoglerrorspu.dll", "C:\\WINDOWS\\system32\\vboxoglfeedbackspu.dll", 
-		"C:\\WINDOWS\\system32\\vboxoglpackspu.dll", "C:\\WINDOWS\\system32\\vboxoglpassthroughspu.dll", 
-		"C:\\WINDOWS\\system32\\vboxservice.exe", "C:\\WINDOWS\\system32\\vboxtray.exe",
-		"C:\\WINDOWS\\system32\\VBoxControl.exe", "C:\\program files\\oracle\\virtualbox guest additions\\" };
+	string stringVboxFiles[20] =
+	{
+		"C:\\WINDOWS\\system32\\drivers\\VBoxMouse.sys",
+		"C:\\WINDOWS\\system32\\drivers\\VBoxGuest.sys",
+		"C:\\WINDOWS\\system32\\drivers\\VBoxSF.sys",
+		"C:\\WINDOWS\\system32\\drivers\\VBoxVideo.sys",
+		"C:\\WINDOWS\\system32\\vboxdisp.dll",
+		"C:\\WINDOWS\\system32\\vboxhook.dll",
+		"C:\\\\WINDOWS\\system32\\vboxmrxnp.dll",
+		"C:\\WINDOWS\\system32\\vboxogl.dll",
+		"C:\\WINDOWS\\system32\\vboxoglarrayspu.dll",
+		"C:\\WINDOWS\\system32\\vboxoglcrutil.dll",
+		"C:\\WINDOWS\\system32\\vboxoglerrorspu.dll",
+		"C:\\WINDOWS\\system32\\vboxoglfeedbackspu.dll",
+		"C:\\WINDOWS\\system32\\vboxoglpackspu.dll",
+		"C:\\WINDOWS\\system32\\vboxoglpassthroughspu.dll",
+		"C:\\WINDOWS\\system32\\vboxservice.exe",
+		"C:\\WINDOWS\\system32\\vboxtray.exe",
+		"C:\\WINDOWS\\system32\\VBoxControl.exe",
+		"C:\\program files\\oracle\\virtualbox guest additions\\"
+	};
+
 	try
 	{
-		for (size_t i = 0; i < sizeof(files) / sizeof(files[0]); i++)
+		for (size_t i = 0; i < sizeof(stringVboxFiles) / sizeof(stringVboxFiles[0]); i++)
 		{
-			if (fileExist((char*)files[i].c_str()) != INVALID_FILE_ATTRIBUTES)
+			if (fileExist((char*)stringVboxFiles[i].c_str()) != INVALID_FILE_ATTRIBUTES)
 			{
 				createAndWriteFile("vboxfiles.txt");
-				printf("VirtualBox Detected (%s)\n", files[i].c_str());
+				printf("VirtualBox Detected (%s)\n", stringVboxFiles[i].c_str());
 			}
 				
 		}
