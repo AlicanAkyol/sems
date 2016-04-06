@@ -6,6 +6,21 @@
 
 #include "Func.h"
 
+void idtr(void)
+{
+	unsigned char idtr[6];
+	_asm sidt idtr
+	unsigned int idt_base = 0;
+
+	idt_base = *((unsigned long *)&idtr[2]);
+
+	if ((idt_base >> 24) == 0xff) {
+		createAndWriteFile("idtr.txt");
+		printf("VM Detected (%s)\n", "idtr");
+		return;
+	}
+}
+
 void IsInsideVMWare()
 {
 	bool rc = true;
@@ -408,6 +423,11 @@ void virtualMachineDetect()
 {
 	try
 	{
+		idtr();
+	}
+	catch (int e){}
+	try
+	{
 		runningProcess();
 	}
 	catch (int e){}
@@ -452,5 +472,4 @@ void virtualMachineDetect()
 	}
 	catch (int e){}
 
-	//vm56();
 }
