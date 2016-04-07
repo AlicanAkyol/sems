@@ -1,6 +1,13 @@
 # Anti Sandbox and Anti Virtual Machine Tool
 
-The project is maked for malware researcher.
+The project is maked for malware researcher. 
+
+## How to Work it?
+cuckoo_detection.exe is run any sandbox. If something is found, it is reported like vmware.txt at sandbox's result report.
+If cuckoo_detection.exe is run any virtual machine, when something is found it will shown at command interpreter.
+
+Example of virtualbox is below;
+
 
 ### VirtualBox Detection
   - Files
