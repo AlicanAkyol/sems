@@ -1,12 +1,12 @@
 /*VirtualMachine detection tool
 * Resources
 *  -ScoopyNG
-* v1.0
+*  -http://www.offensivecomputing.net/ Written by Danny Quist, Offensive Computing
 */
 
 #include "Func.h"
 
-void idtr(void)
+void idtr()
 {
 	unsigned char idtr[6];
 	_asm sidt idtr
@@ -18,6 +18,67 @@ void idtr(void)
 		createAndWriteFile("idtr.txt");
 		printf("VM Detected (%s)\n", "idtr");
 		return;
+	}
+}
+
+void ldtr()
+{
+	unsigned char   ldtr[5] = "\xef\xbe\xad\xde";
+	unsigned long   ldt = 0;
+
+	_asm sldt ldtr
+	ldt = *((unsigned long *)&ldtr[0]);
+
+	if (ldt != 0xdead0000)
+	{
+		createAndWriteFile("ldtr.txt");
+		printf("VM Detected (%s)\n", "ldtr");
+	}
+}
+
+void gdtr()
+{
+	unsigned char   gdtr[6];
+	unsigned long   gdt = 0;
+
+	_asm sgdt gdtr
+	gdt = *((unsigned long *)&gdtr[2]);
+
+	if ((gdt >> 24) == 0xff)
+	{
+		createAndWriteFile("gdtr.txt");
+		printf("VM Detected (%s)\n", "gdtr");
+	}
+}
+
+void tr()
+{
+	unsigned char	mem[4] = { 0, 0, 0, 0 };
+
+	__asm str mem;
+
+	if ((mem[0] == 0x00) && (mem[1] == 0x40))
+	{
+		createAndWriteFile("tr.txt");
+		printf("VM Detected (%s)\n", "tr");
+	}
+}
+
+void smsw()
+{
+	unsigned int reax = 0;
+
+	__asm
+	{
+		mov eax, 0xCCCCCCCC;
+		smsw eax;
+		mov DWORD PTR[reax], eax;
+	}
+
+	if ((((reax >> 24) & 0xFF) == 0xcc) && (((reax >> 16) & 0xFF) == 0xcc))
+	{
+		createAndWriteFile("smsw.txt");
+		printf("VM Detected (%s)\n", "smsw");
 	}
 }
 
@@ -424,6 +485,26 @@ void virtualMachineDetect()
 	try
 	{
 		idtr();
+	}
+	catch (int e){}
+	try
+	{
+		ldtr();
+	}
+	catch (int e){}
+	try
+	{
+		gdtr();
+	}
+	catch (int e){}
+	try
+	{
+		tr();
+	}
+	catch (int e){}
+	try
+	{
+		smsw();
 	}
 	catch (int e){}
 	try
