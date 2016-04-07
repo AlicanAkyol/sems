@@ -6,6 +6,9 @@ The project is maked for malware researcher.
 cuckoo_detection.exe is run any sandbox. If something is found, it is reported like vmware.txt at sandbox's result report.
 If cuckoo_detection.exe is run any virtual machine, when something is found it will shown at command interpreter.
 
+Example of Cuckoo Sandbox is below;
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckooResult.png)
+
 Example of virtualbox is below;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
 
