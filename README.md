@@ -29,6 +29,9 @@ Example of virtualbox result is shown below;
   - Bios
   - Window
   - Magic
+  - Memory
+  - Version
+  - IDTR, LDTR, TR, SMSW, I/O Port
 
 ### QEMU Detection
   - Regedit
