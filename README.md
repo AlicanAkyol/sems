@@ -10,7 +10,7 @@ When the tool is run in Cuckoo Sandbox, result is shown below; (7 April 2016)
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckooResult.png)
 
 Example of VMware result is shown below;
-![alt tag](https://github.com/AlicanAkyol/sems/blob/master/vmware1.png)
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/vmware_normal.png)
 
 Example of virtualbox result is shown below;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
