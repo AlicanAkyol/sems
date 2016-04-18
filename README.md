@@ -2,10 +2,15 @@
 
 The project is maked for malware researcher. 
 
+cuckoo_detection.exe should be run in your Virtual Machine. If any Virtual track is found, it will be shown and also .txt file will be created in your Virtual Machine like "Virtual track name.txt".
+
 When the tool is run in Cuckoo Sandbox, result is shown below; (7 April 2016) 
 (Link : https://malwr.com/analysis/OWZmMWYzNmJkNDM3NGExMWFjODY2MGE2OWZmZjQzZjE/) 
 
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckooResult.png)
+
+Example of VMware result is shown below;
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/vmware1.png)
 
 Example of virtualbox result is shown below;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
