@@ -1,4 +1,6 @@
 # Anti Sandbox and Anti Virtual Machine Tespit Aracı
+( Sha1 (sems.exe) : 06598E9948C2E256C871E66B5578D51A1886758F)
+
 Zararlı yazılım analizi gerçekleştirirken zararlı yazılımlar tarafından alınan bazı analiz engelleme yöntemleri ile karşılaşılmaktadır. Bu yöntemlerden biri de analiz ortamı kontrolüdür. Analiz ortamı kontrolünde sanal makine, sandbox ve analiz araçlarının varlığı kontrol edilmektedir.
 
 Zararlı yazılımların sanal makine, kum havuzu ve analiz araçlarına yönelik aldıkları ya da alabilecekleri önlemlerin birçoğu bu tespit aracında mevcuttur. Tespit aracı ile zararlı yazılımların nasıl önlemler alabilecekleri ve çalışılan analiz ortamında ne tür tespit açıklıkları barındığı görülebilmektedir.
