@@ -1,5 +1,5 @@
-# Anti Sandbox and Anti Virtual Machine Tool (Turkish : https://github.com/AlicanAkyol/sems/blob/master/Readme_Turkish.md)
-
+# Anti Sandbox and Anti Virtual Machine Tool 
+(Turkish : https://github.com/AlicanAkyol/sems/blob/master/Readme_Turkish.md)
 The project is maked for malware researcher. 
 
 cuckoo_detection.exe should be run in your Virtual Machine. If any Virtual track is found, it will be shown and also .txt file will be created in your Virtual Machine like "Virtual track name.txt".
