@@ -15,15 +15,14 @@ Tespit aracını Cuckoo Sandbox' a gönderdiğimizde alınan sonuç aşağıda g
 
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckooResult.png)
 
-Tespit aracı VMWare sanallaştırma ortamında çalıştırıldığında alına sonuç;
+Tespit aracı VMWare sanallaştırma ortamında çalıştırıldığında alınan sonuç;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/vmware_normal.png)
 
-Tespit aracı Virtualbox sanallaştırma ortamında çalıştırıldığında alına sonuç;
+Tespit aracı Virtualbox sanallaştırma ortamında çalıştırıldığında alınan sonuç;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
 
 ## Gerçekleştirilen Tespitler
 Tespit aracının tespit ettiği araçlar ve ortamlar  aşağıdaki başlıklarda gösterilmektedir.
-
 
 ### VirtualBox Detection
   - Files
