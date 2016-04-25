@@ -1,4 +1,4 @@
-# Anti Sandbox and Anti Virtual Machine Tool
+# Anti Sandbox and Anti Virtual Machine Tool (Turkish : https://github.com/AlicanAkyol/sems/blob/master/Readme_Turkish.md)
 
 The project is maked for malware researcher. 
 
