@@ -53,7 +53,7 @@ void gdtr()
 
 void tr()
 {
-	unsigned char	mem[4] = { 0, 0, 0, 0 };
+	unsigned char mem[4] = { 0, 0, 0, 0 };
 
 	__asm str mem;
 
