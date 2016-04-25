@@ -155,7 +155,6 @@ void vmFile()
 		"C:\\WINDOWS\\system32\\vmGuestLib.dll",
 		"C:\\WINDOWS\\system32\\vmGuestLibJava.dll",
 		"C:\\WINDOWS\\system32\\vmhgfs.dll",
-		"C:\\WINDOWS\\system32\\vmicsvc.exe",
 		"C:\\WINDOWS\\system32\\vmwogl32.dll",
 		"C:\\WINDOWS\\system32\\vmmreg32.dll",
 		"C:\\WINDOWS\\system32\\vmx_fb.dll",
