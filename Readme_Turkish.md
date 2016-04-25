@@ -1,7 +1,7 @@
 # Anti Sandbox and Anti Virtual Machine Tespit Aracı
-Zararlı yazılım analizi gerçekleştirirken zararlı yazılımlar tarafından alınan bazı analiz engelleme yöntemleri bulunmaktadır. Bu yöntemlerden biri de analiz ortamı kontrolüdür. Analiz ortamı kontrolünde sanal makine, sandbox ve analiz araçlarının varlığı kontrol edilmektedir.
+Zararlı yazılım analizi gerçekleştirirken zararlı yazılımlar tarafından alınan bazı analiz engelleme yöntemleri ile karşılaşılmaktadır. Bu yöntemlerden biri de analiz ortamı kontrolüdür. Analiz ortamı kontrolünde sanal makine, sandbox ve analiz araçlarının varlığı kontrol edilmektedir.
 
-Zararlı yazılımların sanal makine, kum havuzu ve analiz araçlarına yönelik aldıkları ya d alabilecekleri önlemlerin birçoğu bu tespit aracında mevcuttur. Tespit aracı ile zararlı yazılımların nasıl önlemler alabilecekleri ve çalışılan analiz ortamında ne tür tespit açıklıkları barındığı görülebilmektedir.
+Zararlı yazılımların sanal makine, kum havuzu ve analiz araçlarına yönelik aldıkları ya da alabilecekleri önlemlerin birçoğu bu tespit aracında mevcuttur. Tespit aracı ile zararlı yazılımların nasıl önlemler alabilecekleri ve çalışılan analiz ortamında ne tür tespit açıklıkları barındığı görülebilmektedir.
 
 ## Nasıl Çalışır?
 Tespit aracı ile çalışılan ortamı test etmek için yapılacak tek şey tespit aracını ortamda çalıştırmaktır.
