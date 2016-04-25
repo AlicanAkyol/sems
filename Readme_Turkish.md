@@ -9,6 +9,18 @@ Tespit aracı ile çalışılan ortamı test etmek için yapılacak tek şey tes
   
   - Test etmek istenilen ortam sandbox ise tespit aracı sandbox ortamına submit edilerek analiz işleminden geçirilir. Analiz işlemi bittikten sonra sonuçlarda dosya aktivitelerine bakılır. Eğer tespit gerçekleştir ise burada tespit edilen sanal makine veya sandbox izlerinin isminde .txt dosyaları bulunacaktır.
   
+## Gerçekleştirilen Tespitlerden Örnekler
+Tespit aracını Cuckoo Sandbox' a gönderdiğimizde alınan sonuç aşağıda gösterilmektedir; (7 Nisan 2016) 
+(Link : https://malwr.com/analysis/OWZmMWYzNmJkNDM3NGExMWFjODY2MGE2OWZmZjQzZjE/) 
+
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckooResult.png)
+
+Tespit aracı VMWare sanallaştırma ortamında çalıştırıldığında alına sonuç;
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/vmware_normal.png)
+
+Tespit aracı Virtualbox sanallaştırma ortamında çalıştırıldığında alına sonuç;
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
+
 ## Gerçekleştirilen Tespitler
 Tespit aracının tespit ettiği araçlar ve ortamlar  aşağıdaki başlıklarda gösterilmektedir.
 
