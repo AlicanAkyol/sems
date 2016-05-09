@@ -23,6 +23,26 @@ Tespit aracı VMWare sanallaştırma ortamında çalıştırıldığında alına
 Tespit aracı Virtualbox sanallaştırma ortamında çalıştırıldığında alınan sonuç;
 ![alt tag](https://github.com/AlicanAkyol/sems/blob/master/Sanalla%C5%9Ft%C4%B1rmaOrtam%C4%B1TespitArac%C4%B1-2.png)
 
+Sems, Cuckoo'da çalıştırıldığı zaman alınan sonuç:
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/cuckoo_tespitler.png)
+
+Cuckoo full rapor : https://malwr.com/analysis/OTJmMDlhOWViMjlhNGY1MDgzNmM5ZDMzZGZlZjI2ZDg/
+
+Sems, ThreatExpert'te çalıştırıldığı zaman alınan sonuç:
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/threatexpert_tespitler.png)
+
+Threatexpert full rapor: http://www.threatexpert.com/report.aspx?md5=b75f84ea8a08eade90e7afd499cd14e1
+
+Sems, Comodo'da çalıştırıldığı zaman alınan sonuç:
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/comodo_tespitler.png)
+
+Comodo full rapor : http://camas.comodo.com/cgi-bin/submit?file=8a7962a180d09fe3274c09abe4eb9182b500360cb72ef2f1070226db4c01e699
+
+Sems, Payload Security'de çalıştırıldığı zaman alınan sonuç:
+![alt tag](https://github.com/AlicanAkyol/sems/blob/master/payload_tespitler.png)
+
+Payload Security full rapor: https://www.hybrid-analysis.com/sample/3a5481d105673bf20256512c9a32b60e946a240c1793e2603c226c788f234055?environmentId=1
+
 ## Gerçekleştirilen Tespitler
 Tespit aracının tespit ettiği araçlar ve ortamlar  aşağıdaki başlıklarda gösterilmektedir.
 
