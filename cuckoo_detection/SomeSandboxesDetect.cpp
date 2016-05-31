@@ -43,9 +43,25 @@ void computerNameSandboxes()
 	}
 }
 
+void processNamesDetect()
+{
+	if (processTools("sample.exe", 10))
+	{
+		createAndWriteFile("sample_exe.txt");
+		printf("Sandbox detected (sample.exe)\n");
+	}
+
+	if (processTools("sub.exe", 7))
+	{
+		createAndWriteFile("sub_exe.txt");
+		printf("Sandbox Detected (sub.exe)\n");
+	}
+}
+
 void someSandboxesDetect()
 {
-	try{
+	processNamesDetect();
+	/*try{
 		computerNameSandboxes();
 	}
 	catch (int e){
@@ -80,5 +96,5 @@ void someSandboxesDetect()
 		searchFile(IDR_TEXT1);
 	}
 	catch (int e){
-	}
+	}*/
 }

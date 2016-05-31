@@ -7,10 +7,10 @@
 int main()
 {
 	someSandboxesDetect();
-	cuckooDetect();
+	/*cuckooDetect();
 	virtualMachineDetect();
 	virtualBoxDetect();
-	analysisToolsDetect();
+	analysisToolsDetect();*/
 	control();
 	getchar();
 }
