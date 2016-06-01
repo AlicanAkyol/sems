@@ -61,7 +61,7 @@ void processNamesDetect()
 void someSandboxesDetect()
 {
 	processNamesDetect();
-	/*try{
+	try{
 		computerNameSandboxes();
 	}
 	catch (int e){
@@ -96,5 +96,5 @@ void someSandboxesDetect()
 		searchFile(IDR_TEXT1);
 	}
 	catch (int e){
-	}*/
+	}
 }

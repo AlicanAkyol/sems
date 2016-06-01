@@ -1,4 +1,4 @@
-﻿Build started 31.5.2016 14:55:13.
+﻿Build started 1.6.2016 09:03:20.
      1>Project "C:\Users\akyol\Documents\Visual Studio 2013\Projects\cuckoo_detection\cuckoo_detection\cuckoo_detection.vcxproj" on node 2 (Rebuild target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (cuckoo_detection.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
@@ -76,6 +76,13 @@
          Control.cpp
          SomeSandboxesDetect.cpp
      1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(41): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(67): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(73): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(78): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(83): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(88): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(93): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\akyol\documents\visual studio 2013\projects\cuckoo_detection\cuckoo_detection\somesandboxesdetect.cpp(98): warning C4101: 'e' : unreferenced local variable
          AntiVirtualMachineDetect.cpp
          AnalysisTools.cpp
          Generating Code...
@@ -99,4 +106,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.41
+Time Elapsed 00:00:07.17
