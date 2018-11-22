@@ -257,7 +257,7 @@ void filesAndFolderCheck()
 
 void cuckoomonDetect()
 {
-	if (GetModuleHandle((LPCWSTR)"cuckoomon.dll") != NULL) {
+	if (GetModuleHandle(L"cuckoomon.dll") != NULL) {
 		createAndWriteFile("cuckoomon.txt");
 		printf("Cuckoo Detected \n");
 	}

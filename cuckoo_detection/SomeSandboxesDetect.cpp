@@ -6,7 +6,7 @@
 
 void sandboxieDetect()
 {
-	if (GetModuleHandle((LPCWSTR)"sbiedll.dll") != NULL) {
+	if (GetModuleHandle(L"sbiedll.dll") != NULL) {
 		createAndWriteFile("sandboxie.txt");
 		printf("Sandboxie Detected \n");
 	}
@@ -14,7 +14,7 @@ void sandboxieDetect()
 
 void dbgDetect()
 {
-	if (GetModuleHandle((LPCWSTR)"dbghlp.dll") != NULL) {
+	if (GetModuleHandle(L"dbghlp.dll") != NULL) {
 		createAndWriteFile("dbghlp.txt");
 		printf("dbghlp Detected \n");
 	}
